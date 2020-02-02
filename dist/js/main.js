@@ -10,13 +10,25 @@ let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
 
-function toggleMenu(){
-    menuBtn.classList.toggle('close');
-    navMenu.classList.toggle('show');
-    menuBranding.classList.toggle('show');
-    menuNav.classList.toggle('show');
-    navItem.forEach(item => {
-      item.classList.toggle('show');
-    })
-  
+function toggleMenu() {
+    if(!showMenu){
+      menuBtn.classList.add('close');
+      menu.classList.add('show');
+      menuNav.classList.add('show');
+      menuBranding.classList.add('show');
+      navItems.forEach(item => item.classList.add('show'));
+
+    //set menu state
+    showMenu = true;
+
+
+    } else {
+        menuBtn.classList.remove('close');
+      menu.classList.remove('show');
+      menuNav.classList.remove('show');
+      menuBranding.classList.remove('show');
+      navItems.forEach(item => item.classList.remove('show'));
+
+      showMenu = false;
+    }
 }
