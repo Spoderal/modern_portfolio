@@ -120,7 +120,7 @@
         font-weight: 300;
         color: #fff;
         text-decoration: none;
-        @include easeOut
+        @include easeOut;
 
         &:hover {
             color: $secondary-color;
